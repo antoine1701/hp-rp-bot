@@ -32,3 +32,12 @@ client.on('message', message => {
     if (!command) return
     command.run(message, args, client);
 })
+
+client.on('guildMemberAdd', member => {
+    member.guild.channels.cache.get(config.greeting.channelbvn).send(`${member} a rejoint le serveur ! Nous sommes désormais ${member.guild.memberCount} ! 🎉`)
+    member.roles.add(config.greeting.role)
+})
+
+client.on('guildMemberRemove', member => {
+    member.guild.channels.cache.get(config.greeting.channelarv).send(`${member.user.tag} a quitté le serveur... 😢`)
+})
