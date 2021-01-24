@@ -39,5 +39,5 @@ client.on('guildMemberAdd', member => {
 })
  
 client.on('guildMemberRemove', member => {
-    member.guild.channels.cache.get(config.greeting.channel).send(`${member.user.tag} a quitté le serveur... 😢`)
+    member.guild.channels.cache.get(config.greeting.channel2).send(`${member.user.tag} a quitté le serveur... 😢`)
 })
