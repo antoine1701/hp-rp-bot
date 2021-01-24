@@ -34,7 +34,7 @@ client.on('message', message => {
 })
 
 client.on('guildMemberAdd', member => {
-    member.guild.channels.cache.get(config.greeting.channel).send(`Hey ${member} ! Bienvenue dans le serveur ${guild} ! Nous t’invitons à aller voir les salons <#732293626071220244> et <#736343000933990531> afin d’y accepter les règles et d’y prendre tes rôles ! Plein d’autres salons dans les catégories Informations et Autres sont à aller voir ! Allez checker tous les salons des deux premières catégories 😉 !`)
+    member.guild.channels.cache.get(config.greeting.channel).send(`Hey ${member} ! Bienvenue dans le serveur ${guild.name} ! Nous t’invitons à aller voir les salons <#732293626071220244> et <#736343000933990531> afin d’y accepter les règles et d’y prendre tes rôles ! Plein d’autres salons dans les catégories Informations et Autres sont à aller voir ! Allez checker tous les salons des deux premières catégories 😉 !`)
     member.roles.add(config.greeting.role)
 })
  
