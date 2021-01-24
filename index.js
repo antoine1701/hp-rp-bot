@@ -34,10 +34,10 @@ client.on('message', message => {
 })
 
 client.on('guildMemberAdd', member => {
-    member.guild.channels.cache.get(config.greeting.channel).send(`${member} a rejoint le serveur ! Nous sommes désormais ${member.guild.memberCount} ! 🎉`)
+    member.guild.channels.cache.get(config.greeting.channel).send(`${member} a rejoint le serveur. Nous sommes désormais ${member.guild.memberCount} ! 🎉`)
     member.roles.add(config.greeting.role)
 })
-
+ 
 client.on('guildMemberRemove', member => {
     member.guild.channels.cache.get(config.greeting.channel).send(`${member.user.tag} a quitté le serveur... 😢`)
 })
