@@ -4,7 +4,7 @@ module.exports = {
     run: message => {
         message.channel.send(new Discord.MessageEmbed()  
         .setTitle('Titre')
-        .setColor('#680e0e'))
+        .setColor('#ff4100'))
     },
     name: 'embed'
 }
