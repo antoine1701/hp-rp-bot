@@ -3,7 +3,8 @@ const Discord = require('discord.js')
 module.exports = {
     run: message => {
         message.channel.send(new Discord.MessageEmbed()  
-        .setTitle('Titre'))
+        .setTitle('Titre')
+        .setColor('#680e0e'))
     },
     name: 'embed'
 }
