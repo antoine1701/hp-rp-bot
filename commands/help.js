@@ -12,7 +12,7 @@ module.exports = {
         else {
             message.channel.send(new Discord.MessageEmbed()
                 .setTitle('Liste des commandes')
-                .setDescription(`${client.commands.filter(command => command.help).map(command => `\`${config.prefix}${command.name}\``).join(' ')}\n\nPour plus d'informations sur une commande, tapez \`${config.prefix}help [nom de la commande]\``))
+                .setDescription(`${client.commands.filter(command => command.help).map(command => `\`${command.name}\``).join(' ')}\n\nPour plus d'informations sur une commande, tapez \`${config.prefix}help [nom de la commande]\``))
         }
     },
     name: 'help',
