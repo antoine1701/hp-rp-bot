@@ -39,3 +39,19 @@ client.on('guildMemberAdd', member => {
 client.on('guildMemberRemove', member => {
     member.guild.channels.cache.get(config.greeting.channel2).send(`${member.user.tag} a quitté le serveur... 😢`)
 })
+
+client.on('ready', () => {
+    const statuses = [
+        () => `hphelp for instructions`,
+        () => `${client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)} utilisateurs`,
+        () => `by antoine#6573`
+    ]
+    let i = 0
+    setInterval(() => {
+        client.user.setActivity(statuses[i](), {type: 'PLAYING'})
+        i = ++i % statuses.length
+    }, 2e4)
+})
+        () => `;help for instructions`,
+        () => `${client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)} utilisateurs`,
+        () => `by antoine#6573`
