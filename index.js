@@ -42,7 +42,7 @@ client.on('guildMemberRemove', member => {
 
 client.on('ready', () => {
     const statuses = [
-        () => `hphelp for instructions`,
+        () => `hp!help for instructions`,
         () => `${client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)} utilisateurs`,
         () => `by antoine#6573`
     ]
