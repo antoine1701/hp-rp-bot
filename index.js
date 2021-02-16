@@ -9,8 +9,6 @@ client.login(process.env.TOKEN);
 client.commands = new Discord.Collection
 client.on("ready", () => {
     console.log("Ready");
-    client.user.setStatus("online");
-    client.user.setActivity("by antoine#6573", {type: 'PLAYING'});
 })
 
 fs.readdir('./commands', (err, files) => {
