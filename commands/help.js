@@ -7,7 +7,7 @@ module.exports = {
             const command = client.commands.get(args[0].toLowerCase())
             if (!command || !command.help) return message.channel.send('Cette commande n\'existe pas.')
             message.channel.send(new Discord.MessageEmbed()
-                .setDescription(`**Commande : ${command.name}**\n\n${command.help.description}\n\nSyntaxe : \`${config.prefix}${command.name}${command.help.syntax ? ` ${command.help.syntax}` : ''}\``))
+                .setDescription(`**Commande : ${command.name}**\n\n__Description :__${command.help.description}\n\n__Syntaxe :__ \`${config.prefix}${command.name}${command.help.syntax ? ` ${command.help.syntax}` : ''}\n\n__Aliases :__ \` ${config.prefix}${command.help.aliases ? ` ${command.help.aliases}` : ''}`))
         }
         else {
             message.channel.send(new Discord.MessageEmbed()
@@ -18,6 +18,7 @@ module.exports = {
     name: 'help',
     help: {
         description: 'Cette commande permet d\'avoir de l\'aide.',
-        syntax: '[nom de la commande]'
+        syntax: '[nom de la commande]',
+        aliases: 'h'
     }
 }
