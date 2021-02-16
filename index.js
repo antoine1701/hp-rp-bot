@@ -52,6 +52,3 @@ client.on('ready', () => {
         i = ++i % statuses.length
     }, 2e4)
 })
-        () => `;help for instructions`,
-        () => `${client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)} utilisateurs`,
-        () => `by antoine#6573`
